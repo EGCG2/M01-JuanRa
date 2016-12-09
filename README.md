@@ -1,1 +1,1 @@
-Repositorio Maven para las pr·cticas de EGC
+# Repositorio Maven para las pr√°cticas de EGC
