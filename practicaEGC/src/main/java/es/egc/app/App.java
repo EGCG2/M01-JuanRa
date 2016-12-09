@@ -19,37 +19,6 @@ public class App
 
         // note undirected edges are printed as: {<v1>,<v2>}
         System.out.println(stringGraph.toString());
-
-        // create a graph based on URL objects
-        DirectedGraph<URL, DefaultEdge> hrefGraph = createHrefGraph();
-
-        // note directed edges are printed as: (<v1>,<v2>)
-        System.out.println(hrefGraph.toString());
-    }
-
-     private static DirectedGraph<URL, DefaultEdge> createHrefGraph()
-    {
-        DirectedGraph<URL, DefaultEdge> g =
-            new DefaultDirectedGraph<URL, DefaultEdge>(DefaultEdge.class);
-
-        try {
-            URL amazon = new URL("[http://www.amazon.com](http://www.amazon.com)");
-            URL yahoo = new URL("[http://www.yahoo.com](http://www.yahoo.com)");
-            URL ebay = new URL("[http://www.ebay.com](http://www.ebay.com)");
-
-            // add the vertices
-            g.addVertex(amazon);
-            g.addVertex(yahoo);
-            g.addVertex(ebay);
-
-            // add edges to create linking structure
-            g.addEdge(yahoo, amazon);
-            g.addEdge(yahoo, ebay);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-
-        return g;
     }
 
     private static UndirectedGraph<String, DefaultEdge> createStringGraph()

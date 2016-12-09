@@ -34,5 +34,7 @@ public class AppTest
     public void testApp()
     {
         assertTrue(App.getVal()==1);
+        String[] arguments = new String[] {"123"};
+        App.main(arguments);
     }
 }
