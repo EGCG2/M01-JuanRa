@@ -39,5 +39,12 @@
       <artifactId>jgrapht-core</artifactId>
       <version>1.0.0</version>
     </dependency>
+    <dependency>
+     <groupId>ldapjdk</groupId>
+     <artifactId>ldapjdk</artifactId>
+     <scope>system</scope>
+     <version>1.0</version>
+     <systemPath>${basedir}\src\lib\ldapjdk_4.1.jar</systemPath>
+    </dependency>
   </dependencies>
 </project>
